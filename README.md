@@ -58,7 +58,7 @@ Ensure you have the following installed:
 7. **Run the Apache Beam Pipeline**
    To run the pipeline that reads from PostgreSQL and writes to Hive:
    ```bash
-   python beam_postgres_to_hive.py
+   python postgres_to_hive.py
    ```
 
 8. **Verifying Data in Hive**

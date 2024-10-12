@@ -64,6 +64,9 @@ Ensure you have the following installed:
 8. **Verifying Data in Hive**
    Once the pipeline is executed, check the output in Hive:
    ```bash
+   start-dfs.sh
+   hive --service metastore &
+   hive
    hive> SHOW TABLES;
    hive> SELECT * FROM time_table_parquet;
    ```

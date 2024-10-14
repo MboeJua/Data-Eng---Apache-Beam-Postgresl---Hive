@@ -16,7 +16,7 @@ Ensure you have the following installed:
 
 ## Pipeline Overview
 
-1. **Source**: PostgreSQL database table (`time_table`) which captures real-time events.
+1. **Source**: PostgreSQL database table (eg `time_table`) which captures real-time events.
 2. **Transformation**: The pipeline processes and filters new records based on a timestamp.
 3. **Sink**: Writes the filtered data into Hive, stored in **Parquet** format.
 
@@ -37,7 +37,7 @@ Ensure you have the following installed:
 3. **Configure PostgreSQL**
    - Setup Ensure PostgreSQL is running and accessible.
    - Set up a user with proper privileges (`hive` user).
-   - Update the connection parameters in the Beam pipeline script (e.g `postgres_to_hive.py`).
+   - Update the connection parameters in the Beam pipeline script (e.g `beam_postgres_to_hive.py`).
    - creation of a table for data changes based on step 4
 
 4. **Creation of a cron job for insert in Postgresql**
@@ -58,7 +58,7 @@ Ensure you have the following installed:
 7. **Run the Apache Beam Pipeline**
    To run the pipeline that reads from PostgreSQL and writes to Hive:
    ```bash
-   python postgres_to_hive.py
+   python beam_postgres_to_hive.py
    ```
 
 8. **Verifying Data in Hive**
